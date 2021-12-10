@@ -1,0 +1,8 @@
+
+.select-user-type{
+    display: flex;
+    justify-content: center;
+    gap:50px;
+    align-items: center;
+    margin-top: 300px;
+}

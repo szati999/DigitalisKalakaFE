@@ -1,25 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import './UserTypes.css'
 export default function UserTypes() {
 	return (
-		<div>
-			{/* <nav>
-				<ul>
-					<li>
-						<Link to="/mentor">Mentor</Link>
-					</li>
-					<li>
-						<Link to="/student">Tanuló</Link>
-					</li>
-				</ul>
-			</nav> */}
-			<Link to="/mentor">
-				<button type="button">Mentor</button>
-			</Link>
-			<Link to="/student">
-				<button type="button">Tanuló</button>
-			</Link>
-		</div>
+        <div className="select-user-container">
+            <div className="select-user-type">
+                <Link to="/mentor">
+                    <button className="btn btn-primary btn-lg" type="button">Mentor</button>
+                </Link>
+                <Link to="/student">
+                    <button className="btn btn-secondary btn-lg" type="button">Tanuló</button>
+                </Link>
+		    </div>
+        </div>
+		
 	);
 }
