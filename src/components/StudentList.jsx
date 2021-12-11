@@ -28,17 +28,17 @@ export default function StudentList() {
                         {
                             userList.map((item)=>(
                                 <div className='student-card'>
-                                    <div className='profile-image'><img src={mentorimage}/></div>
+                                    <div className='profile-image' ><img src={mentorimage} alt=''/></div>
                                     <div className='student-name'>{item.name}</div>
                                     <div className='category'>
-                                        <div><img src={certificate}/></div>
+                                        <div><img src={certificate} alt=''/></div>
                                         <div>
                                             <div className='profil'>Profil</div>
                                             <div>{item.category}</div>
                                         </div>
                                     </div>
                                         <div className='motivation'>
-                                        <div><img src={motivation}/></div>
+                                        <div><img src={motivation} alt=''/></div>
                                             <div>
                                                 <div className='profil'>Rólam</div>
                                                 <div>Lorem ipsum dolor sit amet, cons adipiscing elit. Donec dignissim mi et dui pretium, eget sodales urna lacinia. Orci varius natoque penatibus et magnis dis parturien montes, nascetur ridiculus mus. </div>

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
-import { Button, Form, InputGroup } from "react-bootstrap";
+import { Button, Form} from "react-bootstrap";
 import styles from "./StudentRegistration.module.css";
-import SUBJECTS_ARRAY from "../constants/Subjects";
+import SUBJECTS_ARRAY from "../constants/subjects";
 
 const StudentRegistration = () => {
   const [selectedType, setSelectedType] = useState("Diák");
@@ -21,8 +21,75 @@ const StudentRegistration = () => {
   const studentPhoneNumberRef = useRef("");
   const studentSchoolRef = useRef("");
   const studentClassRef = useRef("");
-  const studentName = useRef("");
-  console.log(selectedSubject);
+  const studentMotivRef = useRef("");
+
+  const handleStudentRegister = async (event) => {
+    event.preventDefault();
+    var teacherFName = "";
+    var teacherLName = "";
+    var teacherPhoneNumber = "";
+    var teacherEmail = "";
+
+    const parentFirstName = parentFirstNameRef.current.value;
+    const parentLastName = parentLastNameRef.current.value;
+    const parentEmail = parentEmailRef.current.value;
+    const parentPhoneNumber = parentPhoneNumberRef.current.value;
+    const studentFirstName = studentFirstNameRef.current.value;
+    const studentLastName = studentLastNameRef.current.value;
+    const studentAge = studentAgeRef.current.value;
+    const studentEmail = studentEmailRef.current.value;
+    const studentPhoneNumber = studentPhoneNumberRef.current.value;
+    const studentSchool = studentSchoolRef.current.value;
+    const studentClass = studentClassRef.current.value;
+    const studenMotiv = studentMotivRef.current.value;
+
+    let data = {
+      parentName: parentFirstName + ' ' + parentLastName,
+      parentEmail: parentEmail,
+      parentPhoneNumber: parentPhoneNumber,
+      studentName: studentFirstName + " " + studentLastName,
+      studentAge: studentAge,
+      studentEmail: studentEmail,
+      studentPhone: studentPhoneNumber ? studentPhoneNumber : "",
+      studentSchool: studentSchool,
+      studentClass: studentClass,
+      studentMotivation: studenMotiv,
+      selectedSubject: selectedSubject,
+      pending: true,
+    };
+    if (selectedType === "teacher") {
+      teacherFName = teacherFirstNameRef.current.value;
+      teacherLName = teacherLastNameRef.current.value;
+      teacherPhoneNumber = teacherPhoneNumber ? teacherPhoneNumber : "";
+      teacherEmail = teacherEmailRef.current.value;
+      data = {
+        ...data,
+        techerName: teacherFName + " " + teacherLName,
+        teacherPhoneNumber: teacherPhoneNumber,
+        teacherEmail: teacherEmail,
+      };
+    }
+    try {
+      const resp = await fetch("http://localhost:3000/register_student", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          data,
+        }),
+      });
+      if (resp.status === 200 || resp.status === 201) {
+        console.log("Student registered successfully!", resp);
+      } else {
+        console.log("Error during register (from server) ", resp);
+      }
+      // navigate("/");
+    } catch (error) {
+      console.log("Error during register: ", error);
+    }
+  };
+
   return (
     <div className={styles.student_reg}>
       <div className={styles.head_title}>Tanulnek</div>
@@ -207,7 +274,10 @@ const StudentRegistration = () => {
             <div className={styles.select_motiv}>
               <div className={styles.class_select}>
                 <Form.Label>Korrepetálás kategória</Form.Label>
-                <select className={styles.select}>
+                <select
+                  className={styles.select}
+                  onChange={(e) => setselectedSubject(e.target.value)}
+                >
                   {SUBJECTS_ARRAY.map((elem) => (
                     <option value={elem}>{elem}</option>
                   ))}
@@ -219,12 +289,20 @@ const StudentRegistration = () => {
                   className={styles.input_field}
                   as="textarea"
                   aria-label="With textarea"
+                  ref={studentMotivRef}
                 />
               </div>
             </div>
           </div>
         </div>
-        <Button className={styles.button}>Űrlap beküldése</Button>
+        <Button
+          className={styles.button}
+          onClick={(event) => {
+            handleStudentRegister(event);
+          }}
+        >
+          Űrlap beküldése
+        </Button>
       </Form>
     </div>
   );
