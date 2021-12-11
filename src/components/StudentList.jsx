@@ -11,9 +11,12 @@ export default function StudentList() {
     const [isContactShown, setContactShown] = useState(false)
     const textarearef =  useRef()
 
+
     useEffect(() => {
+        const id = localStorage.getItem('studentSubject')
+
         // Update the document title using the browser API
-        axios.get('http://localhost:3000/getAllStudents').then(resp => {
+        axios.get(`http://localhost:3000/getStudents/${id}`).then(resp => {
                 setUserList(resp.data)
         });
       },[]);
