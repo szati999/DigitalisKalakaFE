@@ -24,8 +24,8 @@ export default function StudentList() {
         <div className='student-card-container'>
             <div className='student-card-holder'>
                 <div className='title-container'>
-                    <div className='title'>Mentorok</div>
-                    <div className='subtitle'>Találd meg a számodra legmegfelelőbb mentort, vedd fel vele a kapcsolatot és máris kezdődhet a korrepetálás.</div>
+                    <div className='title'>Diákok listája</div>
+                    <div className='subtitle'>Legyél önkéntes mentor és segíts a diákoknak tanulni.</div>
                 </div>
                     <div className='holder'>
                         {
