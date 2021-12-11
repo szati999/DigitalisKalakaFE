@@ -32,7 +32,7 @@ export default function UserTypes() {
 						<div className="type-user-subtitle">
 							Regisztráld a diákot, akinek szüksége van a korrepetálásra.
 						</div>
-						<Link to="/student">
+						<Link to="/student-registration">
 							<button className="btn btn-secondary btn-lg" type="button">
 								Tanuló
 							</button>
