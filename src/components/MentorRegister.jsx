@@ -94,7 +94,7 @@ const MentorRegister = () => {
 						<Form.Control
 							type="text"
 							ref={firstNameRef}
-							placeholder="Kérjük add meg keresztneved"
+							placeholder="Kérjük add meg a keresztneved"
 							required
 						/>
 					</Form.Group>
@@ -127,7 +127,6 @@ const MentorRegister = () => {
 							type="text"
 							ref={phoneRef}
 							placeholder="Kérjük add meg a telefonszámodat"
-							required
 						/>
 					</Form.Group>
 				</Row>
@@ -138,7 +137,7 @@ const MentorRegister = () => {
 						<Form.Control
 							type="text"
 							ref={educationRef}
-							placeholder="Kérjük add meg az email címedet"
+							placeholder="Kérjük add meg a végzettségedet"
 							required
 						/>
 					</Form.Group>
