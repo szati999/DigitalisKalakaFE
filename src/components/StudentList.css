@@ -1,0 +1,114 @@
+.student-card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.profil{
+    width: 49px;
+    height: 32px;
+    left: 0px;
+    top: 0px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.category{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px;
+    width: 363px;
+    height: 88px;
+    border: 1px solid #1990BA;
+    box-sizing: border-box;
+    gap:20px;
+
+}
+.holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.student-name{
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 34px;
+    text-align: center;
+    color: #333333;
+}
+.student-card-holder{
+    display: flex;
+    flex-direction: column;
+}
+.student-card{
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 20px;
+}
+.profile-image{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.motivation{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px;
+    width: 363px;
+    border: 1px solid #1990BA;
+    box-sizing: border-box;
+    gap:20px;
+}
+.title-container{
+    text-align: center;
+}
+.title{
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    color: #333333;
+}
+.subtitle{
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    color: #333333;
+}
+.button-container{
+    margin-top: 20px;
+}
+.contact-modal{
+    height: 500px;
+    width: 400px;
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    align-self: center;
+}
+.modal-button-container{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+}
