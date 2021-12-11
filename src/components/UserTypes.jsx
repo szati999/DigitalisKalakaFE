@@ -20,7 +20,7 @@ export default function UserTypes() {
 						<div className="type-user-subtitle">
 							Legyél önkéntes mentor és segíts a diákoknak tanulni.
 						</div>
-						<Link to="/mentor">
+						<Link to="/mentor-registration">
 							<button className="btn btn-primary btn-lg" type="button">
 								Mentor
 							</button>
