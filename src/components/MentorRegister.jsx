@@ -43,7 +43,7 @@ const MentorRegister = () => {
 					education: enteredEducation,
 					subject: enteredSubject,
 					description: enteredDescription,
-					pending: true,
+					pending: false,
 				}),
 			});
 			if (resp.status === 200 || resp.status === 201) {

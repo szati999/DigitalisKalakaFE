@@ -11,9 +11,12 @@ export default function StudentList() {
     const [isContactShown, setContactShown] = useState(false)
     const textarearef =  useRef()
 
+
     useEffect(() => {
+        const id = localStorage.getItem('studentSubject')
+
         // Update the document title using the browser API
-        axios.get('http://localhost:3000/getAllStudents').then(resp => {
+        axios.get(`http://localhost:3000/getStudents/${id}`).then(resp => {
                 setUserList(resp.data)
         });
       },[]);
@@ -21,8 +24,8 @@ export default function StudentList() {
         <div className='student-card-container'>
             <div className='student-card-holder'>
                 <div className='title-container'>
-                    <div className='title'>Mentorok</div>
-                    <div className='subtitle'>Találd meg a számodra legmegfelelőbb mentort, vedd fel vele a kapcsolatot és máris kezdődhet a korrepetálás.</div>
+                    <div className='title'>Diákok listája</div>
+                    <div className='subtitle'>Legyél önkéntes mentor és segíts a diákoknak tanulni.</div>
                 </div>
                     <div className='holder'>
                         {
