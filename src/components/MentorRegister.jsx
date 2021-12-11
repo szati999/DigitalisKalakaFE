@@ -36,7 +36,7 @@ const MentorRegister = () => {
 					"Content-Type": "application/json",
 				},
 				body: JSON.stringify({
-					name: enteredLName + enteredFName,
+					name: enteredLName + " " + enteredFName,
 					age: enteredAge,
 					email: enteredEmail,
 					phone: enteredPhone,
