@@ -1,8 +1,70 @@
+.select-user-container{
+    padding: 50px;
+}
 
 .select-user-type{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap:50px;
     align-items: center;
-    margin-top: 300px;
+    margin-top: 50px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 50px;
+
+}
+.type-title{
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    color: #333333;
+}
+.type-subtitle{
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    color: #333333;
+}
+.type-buttons{
+    display: flex;
+    flex-direction: row;
+}
+.type-student{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    text-align: center;
+}
+.type-mentor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    text-align: center;
+}
+.type-mentor-title{
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    color: #333333;
+}
+.type-user-subtitle{
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 60px;
 }
