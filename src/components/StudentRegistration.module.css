@@ -108,6 +108,8 @@
 .text_area_holder {
   width: 100%;
   margin-left: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 .select_motiv {
   display: flex;
@@ -128,6 +130,14 @@
   height: 48px;
   background: #1990ba;
   border-radius: 4px;
-  margin: auto;
-  margin-top: 35px;
+}
+.button_holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.error {
+  color: red;
+  font-size: 12px;
 }
