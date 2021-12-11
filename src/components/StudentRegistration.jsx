@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Button, Form} from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import styles from "./StudentRegistration.module.css";
 import SUBJECTS_ARRAY from "../constants/subjects";
 
@@ -44,7 +44,7 @@ const StudentRegistration = () => {
     const studenMotiv = studentMotivRef.current.value;
 
     let data = {
-      parentName: parentFirstName + ' ' + parentLastName,
+      parentName: parentFirstName + " " + parentLastName,
       parentEmail: parentEmail,
       parentPhoneNumber: parentPhoneNumber,
       studentName: studentFirstName + " " + studentLastName,
@@ -75,12 +75,13 @@ const StudentRegistration = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          data,
-        }),
+        body: JSON.stringify(data),
       });
       if (resp.status === 200 || resp.status === 201) {
         console.log("Student registered successfully!", resp);
+        let respData = await resp.json();
+        localStorage.setItem("studentId", respData);
+        localStorage.setItem("studentSubject", selectedSubject);
       } else {
         console.log("Error during register (from server) ", resp);
       }
@@ -277,6 +278,8 @@ const StudentRegistration = () => {
                 <select
                   className={styles.select}
                   onChange={(e) => setselectedSubject(e.target.value)}
+                  placeholder="Kérjük válaszd ki a kategóriát"
+                  defaultChecked
                 >
                   {SUBJECTS_ARRAY.map((elem) => (
                     <option value={elem}>{elem}</option>

@@ -48,6 +48,9 @@ const MentorRegister = () => {
 			});
 			if (resp.status === 200 || resp.status === 201) {
 				console.log("Mentor registered successfully!", resp);
+				let respData = await resp.json();
+				localStorage.setItem('studentId', respData);
+				localStorage.setItem('studentSubject', selectedSubject);
 			} else {
 				console.log("Error during register (from server) ", resp);
 			}
