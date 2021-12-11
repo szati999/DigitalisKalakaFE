@@ -5,9 +5,12 @@ import UserTypes from "./components/UserTypes";
 import MentorRegister from "./components/MentorRegister";
 import StudentRegistration from "./components/StudentRegistration";
 import StudentList from "./components/StudentList";
+import Header from "./components/Header";
 
 export default function App() {
 	return (
+		<>
+		<Header/>
 		<Router>
 			<Routes>
 				<Route path="/" element={<UserTypes />}></Route>
@@ -16,5 +19,7 @@ export default function App() {
 				<Route path="/student" element={<StudentList />}></Route>
 			</Routes>
 		</Router>
+		</>
+		
 	);
 }
