@@ -1,0 +1,133 @@
+.student_reg {
+  padding: 50px 20%;
+}
+.head_title {
+  width: 100%;
+  text-align: center;
+}
+.h1 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 60px;
+  text-align: center;
+  color: #333333;
+}
+.h2 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  color: #333333;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.h3 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: center;
+  color: #333333;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.input_holder {
+  width: 280px;
+  margin-left: 50px;
+}
+.input_field {
+  border: 1px solid #8e8e8e;
+  box-sizing: border-box;
+  border-radius: 4px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 6px 0px;
+}
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.inputs_three {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.inputs_three::after {
+  content: "";
+  width: 280px;
+  margin-left: 50px;
+}
+.type_select_holder {
+  width: 80%;
+  margin-left: 50px;
+}
+.select {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 12px;
+  width: 100%;
+  height: 36px;
+  border: 1px solid #8e8e8e;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: #5a5a5a;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  align-items: center;
+}
+.line {
+  margin-top: 45px;
+  width: 100%;
+  height: 3px;
+  border-bottom: 1px solid #bababa;
+}
+.class_select {
+  width: 100%;
+  margin-left: 50px;
+}
+.text_area_holder {
+  width: 100%;
+  margin-left: 50px;
+}
+.select_motiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-left: 50px;
+}
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8px 12px;
+  width: 148px;
+  height: 48px;
+  background: #1990ba;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 35px;
+}
