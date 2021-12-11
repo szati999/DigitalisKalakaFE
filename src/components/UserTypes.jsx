@@ -33,7 +33,7 @@ export default function UserTypes() {
 						</div>
 					</div>
 					<div className="button-holder">
-						<Link to="/mentor" className="first-button">
+						<Link to="/mentor-registration" className="first-button">
 							<button className="btn btn-primary btn-lg" type="button">
 								Mentor
 							</button>
