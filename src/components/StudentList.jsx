@@ -1,4 +1,4 @@
-import React , {useEffect, useState} from 'react'
+import React , {useEffect, useState, useRef} from 'react'
 import axios from 'axios';
 import './StudentList.css'
 import mentorimage from './mentor.svg'
@@ -8,6 +8,8 @@ import motivation from './motivation.svg'
 
 export default function StudentList() {
     const [userList, setUserList] = useState([])
+    const [isContactShown, setContactShown] = useState(false)
+    const textarearef =  useRef()
 
     useEffect(() => {
         // Update the document title using the browser API
@@ -43,11 +45,25 @@ export default function StudentList() {
                                             </div>
                                         </div>
                                         <div className='button-container'>
-                                             <button className="btn btn-primary btn-lg" type="button">Kapcsolat</button>
+                                             <button onClick={()=> setContactShown(!isContactShown)} className="btn btn-primary btn-lg" type="button">Kapcsolat</button>
                                         </div>
                                 </div>
                             ))
                         }
+                    </div>
+                    {
+                        isContactShown && 
+                        <div className='contact-modal'>
+                            <div><textarea ref={textarearef} placeholder='irj valamit'/></div>
+                            <div className='modal-button-container'>
+                                <button onClick={()=> setContactShown(!isContactShown)} className="btn btn-danger" type="button">Bezaras</button>
+                                <button onClick={()=> console.log(textarearef.current.value,'teaxtarea')} className="btn btn-primary" type="button">Kuldes</button>
+                            </div>
+                          
+                        </div>
+                    }
+                    <div>
+
                     </div>
                 </div>
         </div>
