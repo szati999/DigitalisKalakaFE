@@ -5,25 +5,26 @@ import './StudentList.css'
 
 
 export default function StudentList() {
-    const [userList, setUserlist] = useState([
-        {
-        "id":"R5XvXmekvECbjQeL3jYe",
-        "category":"Magyar",
-        "email":"kocsoglaika2@gmail.com",
-        "name":"Lakatos Winetou2"
-        },
-        {
-        "name":"Lakatos Winetou2",
-        "email":"kocsoglaika2@gmail.com",
-        "subject":"Magyar",
-        "id":"UOyDvON1a9iaBTDVsjAi"
-        }
-        ])
+    const [userList, setUserList] = useState([])
+    // const [userList, setUserlist] = useState([
+    //     {
+    //     "id":"R5XvXmekvECbjQeL3jYe",
+    //     "category":"Magyar",
+    //     "email":"kocsoglaika2@gmail.com",
+    //     "name":"Lakatos Winetou2"
+    //     },
+    //     {
+    //     "name":"Lakatos Winetou2",
+    //     "email":"kocsoglaika2@gmail.com",
+    //     "subject":"Magyar",
+    //     "id":"UOyDvON1a9iaBTDVsjAi"
+    //     }
+    //     ])
     useEffect(() => {
         // Update the document title using the browser API
-        // axios.get('localhost:3000/getAllStudents').then(resp => {
-        //         console.log(resp.data);
-        // });
+        axios.get('http://localhost:3000/getAllStudents').then(resp => {
+                console.log(resp.data);
+        });
         console.log(userList,'asdasd')
       });
    
