@@ -6,20 +6,27 @@ import MentorRegister from "./components/MentorRegister";
 import StudentRegistration from "./components/StudentRegistration";
 import StudentList from "./components/StudentList";
 import Header from "./components/Header";
+import StudentDetails from "./components/StudentDetails";
 
 export default function App() {
 	return (
 		<>
-		<Header/>
-		<Router>
-			<Routes>
-				<Route path="/" element={<UserTypes />}></Route>
-				<Route path="/mentor-registration" element={<MentorRegister />} />
-				<Route path="/student-registration" element={<StudentRegistration />} />
-				<Route path="/student" element={<StudentList />}></Route>
-			</Routes>
-		</Router>
+			<Header />
+			<Router>
+				<Routes>
+					<Route path="/" element={<UserTypes />}></Route>
+					<Route path="/mentor-registration" element={<MentorRegister />} />
+					<Route
+						path="/student-registration"
+						element={<StudentRegistration />}
+					/>
+					<Route path="/student" element={<StudentList />}></Route>
+					<Route
+						path="/student/:studentId"
+						element={<StudentDetails />}
+					></Route>
+				</Routes>
+			</Router>
 		</>
-		
 	);
 }
