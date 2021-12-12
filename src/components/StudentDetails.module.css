@@ -1,0 +1,82 @@
+.loadingSpinner {
+	text-align: center;
+	height: 101vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.mainContainer {
+	width: 600px;
+	margin: 0 auto;
+}
+.title {
+	text-align: center;
+	margin: 2% 0;
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 40px;
+	line-height: 60px;
+}
+.subTitleText {
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 40px;
+	text-align: center;
+	color: #333333;
+	margin-bottom: 5%;
+}
+.back_arrow_cont {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	cursor: pointer;
+}
+.backArrTxt {
+	padding-left: 2%;
+	margin: 0;
+}
+.stud_profile_image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5% 0;
+}
+.h2 {
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 48px;
+	text-align: center;
+	color: #333333;
+	margin: 5% 0;
+}
+.info_block {
+	border: 1px solid #1990ba;
+	border-radius: 4px;
+	padding: 2% 3%;
+	margin-bottom: 5%;
+}
+.h4 {
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 32px;
+}
+.hr {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.submitBtnRow {
+	display: flex;
+	justify-content: center;
+}
+.submitBtn {
+	width: 25%;
+}
